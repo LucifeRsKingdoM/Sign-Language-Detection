@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://e7.pngegg.com/pngimages/889/722/png-clipart-tomoe-symbol-logo-mitsudomoe-mon-symbol-miscellaneous-sign-thumbnail.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Jaini&display=swap" rel="stylesheet">
+    <title>WELCOME</title>
+    <style>
+        body {
+            background-image: url('https://images.hdqwalls.com/wallpapers/bthumb/cool-blur-abstract-4k-nd.jpg');
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px;
+        }
+        header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: auto;
+            border: 5px solid black;
+        }
+        header h1 {
+            margin: 0;
+            padding: 10px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(205, 205, 205);
+            border-radius: 20px;
+            border: 5px solid black;
+            font-family: monospace;
+        }
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: transparent;
+            margin-bottom: 0px;
+            padding-left: 450px;
+        }
+        .text-container p {
+            font-size: 150px;
+            color: rgb(216, 216, 216);
+            transition: color 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 4s steps(50, end) infinite;
+            font-family: "Foldit", sans-serif;
+            margin: 0;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .text h4, .text h2, .text p {
+            font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        .button {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .button a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            background-color: rgb(191, 191, 191);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            border: 5px solid rgb(0, 0, 0);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+        }
+        .button a:hover {
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(97, 97, 97);
+            color: rgb(240, 240, 240);
+        }
+        .upload-container {
+            text-align: center;
+            margin-top: 20px;
+            justify-content:space-around;
+        }
+        .upload-container input[type="file"] {
+            display: none;
+        }
+        .upload-container label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(191, 191, 191);
+            color: rgb(0, 0, 0);
+            border-radius: 20px;
+            font-size: 20px;
+            border: 5px solid rgb(0, 0, 0);
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+            cursor: pointer;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .upload-container label:hover {
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(97, 97, 97);
+            color: rgb(240, 240, 240);
+        }
+        .image-preview {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .image-preview img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid rgb(0, 0, 0);
+            border-radius: 20px;
+        }
+        .clear-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(191, 191, 191);
+            color: rgb(0, 0, 0);
+            border-radius: 20px;
+            font-size: 20px;
+            border: 5px solid rgb(0, 0, 0);
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+            cursor: pointer;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: 20px;
+        }
+        .clear-button:hover {
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(97, 97, 97);
+            color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://img-new.cgtrader.com/items/2302326/110b67defb/large/black-shark-logo-v1-002-3d-model-110b67defb.jpg" alt="image/logo">
+        <h1>SIGN LANGUAGE</h1>
+    </header>
+    <div class="text-container">
+        <p id="changingText" class="typing">W E L C O M E  </p>
+    </div>
+    <div class="text">
+        <h4>To</h4>
+        <h2>SIGN World</h2>
+        <p>This page is only accessible to authenticated users.</p>
+    </div>
+    <div class="upload-container">
+        <input type="file" id="uploadInput" accept="image/*" />
+        <label for="uploadInput">Upload Image</label>
+    </div>
+    <div class="image-preview" id="imagePreview">
+        <!-- Preview of the uploaded image will appear here -->
+    </div>
+    <div class="upload-container">
+        <button class="clear-button" id="clearButton">Clear Image</button>
+        <button class="clear-button" id="clearButton">PREDICT</button>
+    </div>
+
+    <div class="button">
+        <a href="/logout">Logout</a>
+    </div>
+    <script>
+        document.getElementById('uploadInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imagePreview = document.getElementById('imagePreview');
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('clearButton').addEventListener('click', function() {
+            document.getElementById('uploadInput').value = ''; // Clear the file input
+            document.getElementById('imagePreview').innerHTML = ''; // Clear the image preview
+        });
+    </script>
+</body>
+</html>
